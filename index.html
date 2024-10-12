@@ -4,10 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<meta property="og:site_name" content="GoBlog">
-	<meta property="og:title" content="GoBlog">
-	<meta property="og:type" content="article">
-	<meta property="og:url" content="http://localhost:8080/wordpress">
 	
 	
 	
@@ -23,8 +19,10 @@
 	<meta name="theme-version" content="1.3.5">
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-			<title>GoBlog</title>
+			<title>{{ &title }}</title>
 <meta name='robots' content='max-image-preview:large' />
+<meta name="description" content="{{ &OPT.siteDescription }}" />
+<meta name="keywords" content="{{ &keyWords }}">
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <script type="text/javascript">
 /* <![CDATA[ */
@@ -63,7 +61,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 </style>
 <script type="text/javascript" src="https://raw.githubusercontent.com/anjirt/argon/refs/heads/main/files/argon_js_merged.js" id="argon_js_merged-js"></script>
 <script type="text/javascript" src="https://raw.githubusercontent.com/anjirt/argon/refs/heads/main/files/argon.min.js" id="argonjs-js"></script>
-<link rel="https://api.w.org/" href="http://localhost:8080/wordpress/index.php/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8080/wordpress/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.6.2" />
 		<script>
 		document.documentElement.classList.remove("no-js");
@@ -166,6 +163,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 	</script>
 
 			<script src="https://raw.githubusercontent.com/anjirt/argon/refs/heads/main/files/smoothscroll1.js"></script>
+	 {{ &OPT.codeBeforHead }}
 	</head>
 
 
@@ -195,7 +193,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="navbar-brand mr-0">
-															<a class="navbar-brand navbar-title" href="http://localhost:8080/wordpress">GoBlog</a>
+															<a class="navbar-brand navbar-title" href="/">{{ &OPT.siteName }}</a>
 				</div>
 				<div class="navbar-collapse collapse" id="navbar_global">
 					<div class="navbar-collapse-header">
@@ -277,7 +275,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 	</div>
 
 		<div id="banner_container" class="banner-container container text-center">
-					<div class="banner-title text-white"><span class="banner-title-inner">GoBlog</span>
+					<div class="banner-title text-white"><span class="banner-title-inner">{{ &OPT.siteName }}</span>
 			</div>
 			</div>
 		</section>
@@ -356,7 +354,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <aside id="leftbar" class="leftbar widget-area" role="complementary">
 				<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
 			<div class="leftbar-banner card-body">
-				<span class="leftbar-banner-title text-white">GoBlog</span>
+				<span class="leftbar-banner-title text-white">{{ &OPT.siteName }}</span>
 
 								
 			</div>
@@ -380,7 +378,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 												<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<div id="leftbar_overview_author_image" style="background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjNUU3MkU0MjIiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIi8+PGc+PGcgb3BhY2l0eT0iMC4zIj48cGF0aCBmaWxsPSIjNUU3MkU0IiBkPSJNNzQuMzksMzIuODZjLTAuOTgtMS43LTMuMzktMy4wOS01LjM1LTMuMDlINDUuNjJjLTEuOTYsMC00LjM3LDEuMzktNS4zNSwzLjA5TDI4LjU3LDUzLjE1Yy0wLjk4LDEuNy0wLjk4LDQuNDgsMCw2LjE3bDExLjcxLDIwLjI5YzAuOTgsMS43LDMuMzksMy4wOSw1LjM1LDMuMDloMjMuNDNjMS45NiwwLDQuMzctMS4zOSw1LjM1LTMuMDlMODYuMSw1OS4zMmMwLjk4LTEuNywwLjk4LTQuNDgsMC02LjE3TDc0LjM5LDMyLjg2eiIvPjwvZz48ZyBvcGFjaXR5PSIwLjgiPjxwYXRoIGZpbGw9IiM1RTcyRTQiIGQ9Ik02Mi4wNCwyMC4zOWMtMC45OC0xLjctMy4zOS0zLjA5LTUuMzUtMy4wOUgzMS43M2MtMS45NiwwLTQuMzcsMS4zOS01LjM1LDMuMDlMMTMuOSw0Mi4wMWMtMC45OCwxLjctMC45OCw0LjQ4LDAsNi4xN2wxMi40OSwyMS42MmMwLjk4LDEuNywzLjM5LDMuMDksNS4zNSwzLjA5aDI0Ljk3YzEuOTYsMCw0LjM3LTEuMzksNS4zNS0zLjA5bDEyLjQ5LTIxLjYyYzAuOTgtMS43LDAuOTgtNC40OCwwLTYuMTdMNjIuMDQsMjAuMzl6Ii8+PC9nPjwvZz48L3N2Zz4=)" class="rounded-circle shadow-sm" alt="avatar"></div>
-							<h6 id="leftbar_overview_author_name">GoBlog</h6>
+							<h6 id="leftbar_overview_author_name">{{ &OPT.siteName }}</h6>
 														<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a  style="cursor: default;">
@@ -417,7 +415,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</button>
 			</div>
 			<div class="modal-body">
-				<a href=http://localhost:8080/wordpress/index.php/category/uncategorized/ class='badge badge-secondary tag'>Uncategorized <span class='tag-num'>3</span></a>			</div>
+				<a href=/category/uncategorized/ class='badge badge-secondary tag'>Uncategorized <span class='tag-num'>3</span></a>			</div>
 		</div>
 	</div>
 </div>
@@ -431,25 +429,31 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</button>
 			</div>
 			<div class="modal-body">
-				<a href=http://localhost:8080/wordpress/index.php/tag/first/ class='badge badge-secondary tag'>first <span class='tag-num'>1</span></a><a href=http://localhost:8080/wordpress/index.php/tag/hello/ class='badge badge-secondary tag'>hello <span class='tag-num'>1</span></a>			</div>
+				<a href=/tag/first/ class='badge badge-secondary tag'>first <span class='tag-num'>1</span></a><a href=/tag/hello/ class='badge badge-secondary tag'>hello <span class='tag-num'>1</span></a>			</div>
 		</div>
 	</div>
 </div>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main article-list article-list-home" role="main">
+		   {{ #articleList }}
 			<article class="post card bg-white shadow-sm border-0 " id="post-11" class="post-11 post type-post status-publish format-standard hentry category-uncategorized">
 	<header class="post-header text-center">
-				<a class="post-title" href="http://localhost:8080/wordpress/index.php/2024/10/12/huu/">huu</a>
+				<a class="post-title" href="/article/{{&id}}/{{&link}}.html">{{ &title }}</a>
 		<div class="post-meta">
 			<div class="post-meta-detail post-meta-detail-time">
 					<i class="fa fa-clock-o" aria-hidden="true"></i>
-					<time title="Posted at 2024-10-12 3:00:56 | Edited at 2024-10-12 3:00:56">2024-10-12 3:00
+					<time title="Posted at {{ &createDate10 }}">{{ &createDate10 }}
 					</time>
 				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-views">
 					<i class="fa fa-eye" aria-hidden="true"></i> 1</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-comments">
-					<i class="fa fa-comments-o" aria-hidden="true"></i> 0</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-categories">
-				<i class="fa fa-bookmark-o" aria-hidden="true"></i> <a href="http://localhost:8080/wordpress/index.php/category/uncategorized/" target="_blank" class="post-meta-detail-catagory-link">Uncategorized</a></div>						</br><div class="post-meta-detail post-meta-detail-words">
+					<i class="fa fa-comments-o" aria-hidden="true"></i> 0</div> <div class="post-meta-devide">|</div>  
+			{{ #category }}
+			<div class="post-meta-detail post-meta-detail-categories">
+				<i class="fa fa-bookmark-o" aria-hidden="true"></i> <a href="/category/{{&.}}" target="_blank" class="post-meta-detail-catagory-link">{{&.}}</a></div>	
+	</br>
+			{{ /category }}
+			<div class="post-meta-detail post-meta-detail-words">
 		<i class="fa fa-file-word-o" aria-hidden="true"></i><span> 1 Words</span>
 		</div>
 		<div class="post-meta-devide">|</div>
@@ -461,9 +465,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			</header>
 
 				<div class="post-content">
-			apasih		</div>
+			{{ &contentText }}		</div>
 	
-	</article><article class="post card bg-white shadow-sm border-0 " id="post-7" class="post-7 post type-post status-publish format-standard hentry category-uncategorized">
+	</article>
+		{{ /articleList }}
+		<article class="post card bg-white shadow-sm border-0 " id="post-7" class="post-7 post type-post status-publish format-standard hentry category-uncategorized">
 	<header class="post-header text-center">
 				<a class="post-title" href="http://localhost:8080/wordpress/index.php/2024/10/12/test/">Test</a>
 		<div class="post-meta">
@@ -517,6 +523,23 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			<i class="fa fa-tags" aria-hidden="true"></i>
 			<a href='http://localhost:8080/wordpress/index.php/tag/first/' target='_blank' class='tag badge badge-secondary post-meta-detail-tag'>first</a><a href='http://localhost:8080/wordpress/index.php/tag/hello/' target='_blank' class='tag badge badge-secondary post-meta-detail-tag'>hello</a>		</div>
 	</article>				
+		 <div class="read-more"> 
+     {{ #pageNewer }}
+     <a href="{{ &url }}" class="page-btn"><i class="remixicon-arrow-left-line"></i>Previous page</a>
+     {{ /pageNewer }}
+     {{ #pageOlder }}
+     <a href="{{ &url }}" class="animated fadeIn font-extrabold text-gray-700 hover:text-gray-900 more-btn">Next page<i class="remixicon-arrow-right-line"></i></a>
+     {{ /pageOlder }}
+    </div> 
+    <div class="index-page"> 
+     <div class="pagination-container animated fadeIn"> 
+     {{ #pageNewer }}
+     <a href="{{ &url }}" class="page-btn"><i class="remixicon-arrow-left-line"></i>Previous page</a>
+     {{ /pageNewer }}
+     {{ #pageOlder }}
+     <a href="{{ &url }}" class="animated fadeIn font-extrabold text-gray-700 hover:text-gray-900 more-btn">Next page<i class="remixicon-arrow-right-line"></i></a>
+     {{ /pageOlder }}
+     </div> 
 					<footer id="footer" class="site-footer card shadow-sm border-0">
 												<div>Theme <a href="https://github.com/solstice23/argon-theme" target="_blank"><strong>Argon</strong></a> By solstice23</div>
 					</footer>
@@ -528,6 +551,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		
 	</div>
 </div>
+	{{ &OPT.codeBeforBody }}
 </body>
 
 
